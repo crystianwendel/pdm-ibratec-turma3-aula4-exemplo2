@@ -8,6 +8,7 @@
 
 #import "NewCommentViewController.h"
 #import <AFNetworking.h>
+#import <SVProgressHUD.h>
 
 @interface NewCommentViewController ()
 
@@ -44,11 +45,14 @@
             @"content":self.commentTxt.text
             }
         };
+    [SVProgressHUD show];
     [manager  POST:@"https://teste-aula-ios.herokuapp.com/comments.json"
         parameters:parameters
            success:^(AFHTTPRequestOperation *operation, id responseObject) {
+               [SVProgressHUD dismiss];
                [self.navigationController popViewControllerAnimated:YES];
            }           failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+               [SVProgressHUD dismiss];
                [self.navigationController popViewControllerAnimated:YES];
            }];
 }
