@@ -42,6 +42,20 @@
     [self recarregarDados];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [SVProgressHUD showWithStatus:@"Signing in..."];
+    [manager POST: @"https://teste-aula-ios.herokuapp.com/users/sign_in.json"
+       parameters:@{ @"user" : @{ @"email": @"crystian@roadmaps.com.br", @"password": @"12345678" } }
+          success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+              [SVProgressHUD dismiss];
+              NSLog(@"Login success");
+          } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+              [SVProgressHUD dismiss];
+              NSLog(@"Login failure");
+          }];
+}
+
 - (void) recarregarDados {
     self.page = 1;
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];

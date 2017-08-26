@@ -150,7 +150,6 @@
 				TargetAttributes = {
 					9E991A191F362C6A00E5F5B5 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 8BRMRY3GUS;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -371,7 +370,7 @@
 			baseConfigurationReference = 3113751F6371686F5CDD350D /* Pods-ProjetoTeste.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8BRMRY3GUS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ProjetoTeste/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Roadmaps.ProjetoTeste;
@@ -384,7 +383,7 @@
 			baseConfigurationReference = 568CD95987A811A5EA052817 /* Pods-ProjetoTeste.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8BRMRY3GUS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ProjetoTeste/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Roadmaps.ProjetoTeste;

@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewCommentViewController : UIViewController
+@interface NewCommentViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *userTxt;
 @property (weak, nonatomic) IBOutlet UITextView *commentTxt;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 
 @end
